@@ -26,7 +26,9 @@
             :checked (and done "checked")
             :on-change #(re-frame/dispatch [::events/toggle-todo id])}]
    [:span {:class (when done "done")}
-    (:title item)]])
+    (:title item)]
+   [:span.delete {:on-click #(re-frame/dispatch [::events/delete-todo id])}
+    [:i.fa.fa-trash]]])
 
 (defn todo-list [todos]
   [:ul

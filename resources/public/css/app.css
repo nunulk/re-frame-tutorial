@@ -1,3 +1,9 @@
+.toggle {
+  margin-right: 8px;
+}
 .done {
   text-decoration: line-through;
+}
+.delete {
+  margin-left: 1rem;
 }
