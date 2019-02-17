@@ -17,3 +17,8 @@
  (fn [db [event title]]
    (let [id (generate-next-id (:todos db))]
      (update db :todos #(assoc % id {:id id :title title})))))
+
+(re-frame/reg-event-db
+ ::toggle-todo
+ (fn [db [event id]]
+   (update-in db [:todos id :done] not)))

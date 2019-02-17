@@ -19,8 +19,14 @@
                                    (re-frame/dispatch [::events/add-todo title]))
                                  (reset! val "")))}])))
 
-(defn todo-item [item]
-  [:li (:title item)])
+(defn todo-item [{:keys [id done] :as item}]
+  [:li
+   [:input {:type "checkbox"
+            :class "toggle"
+            :checked (and done "checked")
+            :on-change #(re-frame/dispatch [::events/toggle-todo id])}]
+   [:span {:class (when done "done")}
+    (:title item)]])
 
 (defn todo-list [todos]
   [:ul
