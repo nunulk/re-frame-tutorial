@@ -1,8 +1,23 @@
 (ns re-frame-example.views
   (:require
+   [clojure.string :as str]
    [re-frame.core :as re-frame]
    [re-frame-example.subs :as subs]
+   [re-frame-example.events :as events]
+   [reagent.core :as r]
    ))
+
+(defn todo-create []
+  (let [val (r/atom "")]
+    (fn []
+      [:input {:type "text"
+               :value @val
+               :on-change #(reset! val (-> % .-target .-value))
+               :on-key-down #(when (= (.-which %) 13)
+                               (let [title (-> @val str/trim)]
+                                 (when (seq title)
+                                   (re-frame/dispatch [::events/add-todo title]))
+                                 (reset! val "")))}])))
 
 (defn todo-item [item]
   [:li (:title item)])
@@ -17,5 +32,6 @@
   (let [todos (re-frame/subscribe [::subs/todos])]
     [:div
      [:h1 "TODO"]
+     [todo-create]
      [todo-list @todos]
      ]))
