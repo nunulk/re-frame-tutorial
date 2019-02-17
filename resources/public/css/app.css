@@ -1,9 +1,18 @@
-.toggle {
+.todos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.todos li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+.todos li .toggle {
   margin-right: 8px;
 }
-.done {
+.todos li .done {
   text-decoration: line-through;
 }
-.delete {
+.todos li .delete {
   margin-left: 1rem;
 }

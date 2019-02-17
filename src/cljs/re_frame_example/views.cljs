@@ -31,7 +31,7 @@
     [:i.fa.fa-trash]]])
 
 (defn todo-list [todos]
-  [:ul
+  [:ul.todos
    (for [todo todos]
      ^{:key (:id todo)}
      [todo-item todo])])
