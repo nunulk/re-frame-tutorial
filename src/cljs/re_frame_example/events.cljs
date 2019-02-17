@@ -16,7 +16,7 @@
  ::add-todo
  (fn [db [event title]]
    (let [id (generate-next-id (:todos db))]
-     (update db :todos #(assoc % id {:id id :title title})))))
+     (update db :todos #(assoc % id {:id id :title title :done false})))))
 
 (re-frame/reg-event-db
  ::toggle-todo
