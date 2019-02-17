@@ -1,10 +1,10 @@
-(ns re-frame-example.core
+(ns re-frame-tutorial.core
   (:require
    [reagent.core :as r]
    [re-frame.core :as rf]
-   [re-frame-example.events :as events]
-   [re-frame-example.views :as views]
-   [re-frame-example.config :as config]
+   [re-frame-tutorial.events :as events]
+   [re-frame-tutorial.views :as views]
+   [re-frame-tutorial.config :as config]
    ))
 
 

@@ -1,9 +1,9 @@
-(ns re-frame-example.views
+(ns re-frame-tutorial.views
   (:require
    [clojure.string :as str]
    [re-frame.core :as rf]
-   [re-frame-example.subs :as subs]
-   [re-frame-example.events :as events]
+   [re-frame-tutorial.subs :as subs]
+   [re-frame-tutorial.events :as events]
    [reagent.core :as r]
    ))
 

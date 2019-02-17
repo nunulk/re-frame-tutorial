@@ -1,1 +1,1 @@
-(ns re-frame-example.core)
+(ns re-frame-tutorial.core)

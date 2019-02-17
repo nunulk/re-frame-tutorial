@@ -1,7 +1,7 @@
-(ns re-frame-example.events
+(ns re-frame-tutorial.events
   (:require
    [re-frame.core :as rf]
-   [re-frame-example.db :as db]
+   [re-frame-tutorial.db :as db]
    ))
 
 (rf/reg-event-db

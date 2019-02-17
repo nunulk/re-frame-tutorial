@@ -1,4 +1,4 @@
-(ns re-frame-example.db)
+(ns re-frame-tutorial.db)
 
 (def default-db
   {:todos {1 {:id 1 :title "豚肉を買う" :done false}

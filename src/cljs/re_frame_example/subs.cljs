@@ -1,4 +1,4 @@
-(ns re-frame-example.subs
+(ns re-frame-tutorial.subs
   (:require
    [re-frame.core :as rf]))
 

@@ -1,4 +1,4 @@
-(defproject re-frame-example "0.1.0-SNAPSHOT"
+(defproject re-frame-tutorial "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.10.238"]
                  [reagent "0.7.0"]
@@ -26,8 +26,8 @@
   {:builds
    [{:id           "dev"
      :source-paths ["src/cljs"]
-     :figwheel     {:on-jsload "re-frame-example.core/mount-root"}
-     :compiler     {:main                 re-frame-example.core
+     :figwheel     {:on-jsload "re-frame-tutorial.core/mount-root"}
+     :compiler     {:main                 re-frame-tutorial.core
                     :output-to            "resources/public/js/compiled/app.js"
                     :output-dir           "resources/public/js/compiled/out"
                     :asset-path           "js/compiled/out"
@@ -38,7 +38,7 @@
 
     {:id           "min"
      :source-paths ["src/cljs"]
-     :compiler     {:main            re-frame-example.core
+     :compiler     {:main            re-frame-tutorial.core
                     :output-to       "resources/public/js/compiled/app.js"
                     :optimizations   :advanced
                     :closure-defines {goog.DEBUG false}

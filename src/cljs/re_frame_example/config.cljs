@@ -1,4 +1,4 @@
-(ns re-frame-example.config)
+(ns re-frame-tutorial.config)
 
 (def debug?
   ^boolean goog.DEBUG)
